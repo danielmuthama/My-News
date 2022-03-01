@@ -4,10 +4,10 @@
 
 This is a flask application that allows the user to view news sources and read respective articles
 
-## Project Peek
-<img src="peek.png">
+### Project
+<img src="pic.png">
 
-## Setup Requirements
+### Setup Requirements
 
 - Git
 - Python3
