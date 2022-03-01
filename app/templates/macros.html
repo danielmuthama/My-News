@@ -1,0 +1,44 @@
+{% macro displaySources(all_news) %}
+<div class="row">
+    {% for news in all_news %}
+
+    <div class="col-sm-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <a href="{{ news.url }}" target="_blank" data-toggle="tooltip" data-placement="top"
+                        title="Click to visit {{news.name}}">
+                        {{news.name}}
+                    </a>
+                    <p>{{ news.language }}</p>
+                </h3>
+                <p><em>{{news.category}}</em></p>
+                <p class="card-text">{{news.description}}</p>
+                <a href="/source/{{ news.id }}" class="btn btn-primary xb">Visit source</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro displayArticles(articles) %}
+<div class="row">
+    {% for article in articles %}
+
+    <div class="col-sm-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <img src="{{article.urlImage}}" alt="image loading ..." class="img-responsive">
+                </h3>
+                <p class="card-text">{{ article.title }}</p>
+                <p> Posted at: {{article.date}}, by: <em> {{ article.author }}</em></p>
+                <a href="{{ article.url }}" target="_blank" class="btn btn-primary xb">Read Article</a>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %}
